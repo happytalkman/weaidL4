@@ -1,0 +1,172 @@
+export interface Theme {
+  name: string;
+  bg: string;
+  panel: string;
+  panel2: string;
+  border: string;
+  borderB: string;
+  borderA: string;
+  pri: string;
+  priDim: string;
+  priGhost: string;
+  acc: string;
+  acc2: string;
+  green: string;
+  greenD: string;
+  red: string;
+  muted: string;
+  text: string;
+  textDim: string;
+  textMed: string;
+  white: string;
+  dark: string;
+  barBg: string;
+}
+
+export const THEMES: Record<string, Theme> = {
+  default: {
+    name: 'Default (Cyan)',
+    bg: '#00060a',
+    panel: '#010d14',
+    panel2: '#010f18',
+    border: '#0d3347',
+    borderB: '#1a5c7a',
+    borderA: '#0f4060',
+    pri: '#00d4ff',
+    priDim: '#007a99',
+    priGhost: '#001f2e',
+    acc: '#ff6b00',
+    acc2: '#ffcc00',
+    green: '#00ff88',
+    greenD: '#00aa55',
+    red: '#ff3355',
+    muted: '#ff3366',
+    text: '#8ffcff',
+    textDim: '#3a8a9a',
+    textMed: '#5ab8cc',
+    white: '#d8f8ff',
+    dark: '#000d14',
+    barBg: '#011520',
+  },
+  ironman: {
+    name: 'Iron Man',
+    bg: '#0a0600',
+    panel: '#140d01',
+    panel2: '#180f01',
+    border: '#47330d',
+    borderB: '#7a5c1a',
+    borderA: '#60400f',
+    pri: '#ff6b00',
+    priDim: '#994400',
+    priGhost: '#2e1f00',
+    acc: '#ffcc00',
+    acc2: '#ff3355',
+    green: '#00ff88',
+    greenD: '#00aa55',
+    red: '#ff3355',
+    muted: '#ff3366',
+    text: '#ffc88f',
+    textDim: '#9a6a3a',
+    textMed: '#cc8a5a',
+    white: '#fff8d8',
+    dark: '#0d0600',
+    barBg: '#201501',
+  },
+  tron: {
+    name: 'Tron',
+    bg: '#000a14',
+    panel: '#011420',
+    panel2: '#011828',
+    border: '#0d4760',
+    borderB: '#1a7a9a',
+    borderA: '#0f6080',
+    pri: '#00ffff',
+    priDim: '#009999',
+    priGhost: '#002e2e',
+    acc: '#ff00ff',
+    acc2: '#ffff00',
+    green: '#00ff00',
+    greenD: '#00aa00',
+    red: '#ff0066',
+    muted: '#ff0099',
+    text: '#8fffff',
+    textDim: '#3a9a9a',
+    textMed: '#5acccc',
+    white: '#d8ffff',
+    dark: '#000d14',
+    barBg: '#012020',
+  },
+  matrix: {
+    name: 'Matrix',
+    bg: '#000a00',
+    panel: '#011401',
+    panel2: '#011801',
+    border: '#0d470d',
+    borderB: '#1a7a1a',
+    borderA: '#0f600f',
+    pri: '#00ff00',
+    priDim: '#009900',
+    priGhost: '#002e00',
+    acc: '#ffff00',
+    acc2: '#00ffff',
+    green: '#00ff00',
+    greenD: '#00aa00',
+    red: '#ff0000',
+    muted: '#ff3300',
+    text: '#8fff8f',
+    textDim: '#3a9a3a',
+    textMed: '#5acc5a',
+    white: '#d8ffd8',
+    dark: '#000d00',
+    barBg: '#012001',
+  },
+  cyberpunk: {
+    name: 'Cyberpunk',
+    bg: '#0a0014',
+    panel: '#140120',
+    panel2: '#180128',
+    border: '#470d60',
+    borderB: '#7a1a9a',
+    borderA: '#600f80',
+    pri: '#ff00ff',
+    priDim: '#990099',
+    priGhost: '#2e002e',
+    acc: '#00ffff',
+    acc2: '#ffff00',
+    green: '#00ff88',
+    greenD: '#00aa55',
+    red: '#ff0066',
+    muted: '#ff0099',
+    text: '#ff8fff',
+    textDim: '#9a3a9a',
+    textMed: '#cc5acc',
+    white: '#ffd8ff',
+    dark: '#0d0014',
+    barBg: '#200120',
+  },
+};
+
+export function applyTheme(theme: Theme) {
+  const root = document.documentElement;
+  root.style.setProperty('--bg', theme.bg);
+  root.style.setProperty('--panel', theme.panel);
+  root.style.setProperty('--panel2', theme.panel2);
+  root.style.setProperty('--border', theme.border);
+  root.style.setProperty('--border-b', theme.borderB);
+  root.style.setProperty('--border-a', theme.borderA);
+  root.style.setProperty('--pri', theme.pri);
+  root.style.setProperty('--pri-dim', theme.priDim);
+  root.style.setProperty('--pri-ghost', theme.priGhost);
+  root.style.setProperty('--acc', theme.acc);
+  root.style.setProperty('--acc2', theme.acc2);
+  root.style.setProperty('--green', theme.green);
+  root.style.setProperty('--green-d', theme.greenD);
+  root.style.setProperty('--red', theme.red);
+  root.style.setProperty('--muted', theme.muted);
+  root.style.setProperty('--text', theme.text);
+  root.style.setProperty('--text-dim', theme.textDim);
+  root.style.setProperty('--text-med', theme.textMed);
+  root.style.setProperty('--white', theme.white);
+  root.style.setProperty('--dark', theme.dark);
+  root.style.setProperty('--bar-bg', theme.barBg);
+}
